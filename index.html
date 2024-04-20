@@ -10,18 +10,61 @@
 <body class="page">
     <header class="header page__header">
         <div class="header__container container">
-            <div class="header__burger">
-                <button class="button header__button header__button--burger"><span></span></button>
+            <div class="header__start">
+                <div class="header__burger burger">
+                    <button class="button button--icon burger__icon">
+                        <svg width="18.000000" height="16.000000" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="icon" d="M17 0L1 0C0.447754 0 0 0.447754 0 1C0 1.55225 0.447754 2 1 2L17 2C17.5522 2 18 1.55225 18 1C18 0.447754 17.5522 0 17 0ZM1 7L9 7C9.55225 7 10 7.44775 10 8C10 8.55225 9.55225 9 9 9L1 9C0.447754 9 0 8.55225 0 8C0 7.44775 0.447754 7 1 7ZM13 14L1 14C0.447754 14 0 14.4478 0 15C0 15.5522 0.447754 16 1 16L13 16C13.5522 16 14 15.5522 14 15C14 14.4478 13.5522 14 13 14Z" clip-rule="evenodd" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
+                <a href="#" class="header__logo logo"><img class="logo__img" src="img/logo.png" alt="logo"></a>
+                <div class="header__search search">
+                    <button class="button button--icon search__icon">
+                        <svg width="18.000000" height="18.000000" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path id="icon" d="M12.5007 11.0007L11.7107 11.0007L11.4307 10.7307C12.6306 9.33057 13.2507 7.42065 12.9106 5.39062C12.4407 2.6106 10.1206 0.390625 7.32056 0.0505371C3.09058 -0.469482 -0.469482 3.09058 0.0505371 7.32056C0.390625 10.1206 2.6106 12.4407 5.39062 12.9106C7.42065 13.2507 9.33057 12.6306 10.7307 11.4307L11.0007 11.7107L11.0007 12.5007L15.2607 16.7507C15.6707 17.1606 16.3306 17.1606 16.7407 16.7507L16.7507 16.7407C17.1606 16.3306 17.1606 15.6707 16.7507 15.2607L12.5007 11.0007ZM2.00073 6.50073C2.00073 8.99072 4.01074 11.0007 6.50073 11.0007C8.99072 11.0007 11.0007 8.99072 11.0007 6.50073C11.0007 4.01074 8.99072 2.00073 6.50073 2.00073C4.01074 2.00073 2.00073 4.01074 2.00073 6.50073Z" clip-rule="evenodd" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
-            <a href="#" class="logo header__logo"><img class="logo__img" src="img/logo.png" alt="logo"></a>
-            <div class="header__contacts">
-                <button class="button header__button header__button--phone"><span></span></button>
-                <button class="button header__button header__button--chat"><span></span></button>
-                <button class="button header__button header__button--profile"><span></span></button>
+            <div class="header__contacts contacts">
+                <button class="button button--icon contacts__phone">
+                    <svg width="17.000000" height="18.000000" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="icon" d="M0.76 12.25L3.3 11.96C3.91 11.88 4.51 12.1 4.94 12.53L6.78 14.37C9.61 12.92 11.93 10.62 13.37 7.78L11.52 5.92C11.09 5.5 10.88 4.89 10.95 4.29L11.24 1.77C11.36 0.76 12.21 0 13.23 0L14.96 0C16.09 0 17.03 0.93 16.96 2.07C16.43 10.61 9.6 17.42 1.07 17.95C-0.06 18.03 -1 17.09 -1 15.96L-1 14.23C-1.01 13.22 -0.25 12.37 0.76 12.25Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </svg>
+                </button>
+                <button class="button button--icon contacts__chat">
+                    <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="icon" d="M2 0L18 0C19.1001 0 20 0.899902 20 2L20 13C20 14.1001 19.1001 15 18 15L4 15L0 20L0.0100098 2C0.0100098 0.899902 0.899902 0 2 0ZM5 6L15 6C15.55 6 16 5.55005 16 5C16 4.44995 15.55 4 15 4L5 4C4.44995 4 4 4.44995 4 5C4 5.55005 4.44995 6 5 6ZM11 11L5 11C4.44995 11 4 10.55 4 10C4 9.44995 4.44995 9 5 9L11 9C11.55 9 12 9.44995 12 10C12 10.55 11.55 11 11 11Z" clip-rule="evenodd" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </svg>
+                </button>
+                <button class="button button--icon contacts__profile">
+                    <svg width="20.000000" height="18.000000" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <path id="Oval" d="M10.5 9C12.98 9 15 6.98 15 4.5C15 2.01 12.98 0 10.5 0C8.01 0 6 2.01 6 4.5C6 6.98 8.01 9 10.5 9Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        <path id="Path" d="M0.01 16.61C-0.12 17.34 0.53 18 1.33 18L18.66 18C19.49 18 20.11 17.34 19.98 16.61C19.23 12.39 15.05 10 9.99 10C4.94 10 0.76 12.39 0.01 16.61Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                    </svg>
+                </button>
             </div>
-            <div class="header__actions">
-                <button class="button header__button header__button--repair"><span></span><span class="header__button-text">Оставить заявку</span></button>
-                <button class="button header__button header__button--check"><span></span><span class="header__button-text">Статус ремонта</span></button>
+            <div class="header__actions actions">
+                <button class="actions__button">
+                    <span class="actions__button-text">Оставить заявку</span>
+                    <span class="button button--icon actions__repair">
+                        <svg width="20.000000" height="20.000000" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M8.25 13.45L8.66 13.04L6.94 11.33L6.54 11.74L6.33 11.53C6 11.16 5.68 10.96 5.35 11C5.11 11 4.9 11.16 4.74 11.41C4.49 11.82 4.61 12.27 4.66 12.55C4.66 12.64 4.7 12.68 4.7 12.76C4.7 12.88 4.7 13.04 4.41 13.09C4 13.21 3.47 13.33 2.94 13.62C2.2 14.03 1.71 14.39 1.43 14.76C-0.09 16.72 0 18.4 0 18.48C0 18.6 0.04 18.69 0.12 18.73L1.22 19.87C1.3 19.95 1.39 20 1.47 20C1.47 20 1.51 20 1.59 20C2 20 3.47 19.91 5.19 18.56C5.56 18.28 5.92 17.79 6.33 17.05C6.62 16.56 6.78 16.03 6.86 15.58C6.94 15.29 7.07 15.29 7.19 15.29C7.23 15.29 7.31 15.33 7.39 15.33C7.56 15.37 7.72 15.42 7.93 15.42C8.13 15.42 8.33 15.37 8.54 15.25C8.78 15.09 8.95 14.88 8.99 14.64C9.03 14.31 8.87 13.98 8.5 13.7L8.25 13.45Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path d="M16.88 4.87L18.01 4.32C18.06 4.28 18.14 4.24 18.18 4.19L19.91 1.86C20.03 1.69 20.03 1.43 19.86 1.3L18.69 0.11C18.56 -0.01 18.31 -0.06 18.14 0.07L15.83 1.81C15.79 1.86 15.74 1.9 15.7 1.98L15.16 3.13L11 7.21L12.76 9L16.88 4.87Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                            <path d="M17.85 13.04C16.86 12 15.43 11.62 14.09 12L7.64 5.17C7.72 4.79 7.76 4.46 7.76 4.09C7.76 3.04 7.36 2 6.61 1.21C5.58 0.09 4.04 -0.29 2.62 0.21C2.54 0.25 2.42 0.38 2.38 0.55C2.38 0.67 2.42 0.8 2.5 0.92L4.44 2.96C4.87 3.42 4.87 4.21 4.44 4.67C4 5.13 3.25 5.13 2.81 4.67L0.87 2.63C0.76 2.54 0.64 2.5 0.48 2.54C0.36 2.54 0.24 2.67 0.2 2.79C-0.27 4.25 0.08 5.88 1.11 6.96C1.82 7.75 2.85 8.17 3.88 8.17C4.2 8.17 4.55 8.13 4.87 8.04L11.36 14.87C11 16.29 11.4 17.79 12.35 18.83C13.1 19.62 14.05 20 15.08 20C15.51 20 15.91 19.91 16.34 19.79C16.46 19.75 16.58 19.62 16.62 19.5C16.66 19.37 16.62 19.2 16.5 19.12L14.56 17.08C14.37 16.87 14.21 16.54 14.21 16.2C14.21 15.87 14.33 15.58 14.56 15.33C14.8 15.08 15.08 14.96 15.39 14.96C15.71 14.96 15.99 15.08 16.23 15.33L18.16 17.37C18.28 17.45 18.4 17.5 18.52 17.5C18.64 17.45 18.76 17.37 18.8 17.25C18.92 16.83 19 16.37 19 15.91C19 14.83 18.6 13.79 17.85 13.04Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+                        </svg>
+                    </span>
+                </button>
+                <button class="actions__button">
+                    <span class="actions__button-text">Статус ремонта</span>
+                    <span class="button button--icon actions__check">
+                        <svg width="16.000000" height="20.000000" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <path d="M1.5 20C1.5 19.1716 0.828369 18.5 0 18.5L0 1C0 0.447754 0.447754 0 1 0L15 0C15.5522 0 16 0.447754 16 1L16 18.5C15.1716 18.5 14.5 19.1716 14.5 20L13.5 20C13.5 19.1716 12.8284 18.5 12 18.5C11.1716 18.5 10.5 19.1716 10.5 20L9.5 20C9.5 19.1716 8.82837 18.5 8 18.5C7.17163 18.5 6.5 19.1716 6.5 20L5.5 20C5.5 19.1716 4.82837 18.5 4 18.5C3.17163 18.5 2.5 19.1716 2.5 20L1.5 20ZM6.32959 12.3828C7.47046 12.5935 8.55371 12.3445 9.41626 11.7883L11.5254 13.8972C11.8992 14.2712 12.5127 14.2712 12.896 13.8877C13.27 13.5139 13.27 12.9004 12.896 12.5266L10.7871 10.4272C11.324 9.57422 11.5828 8.54834 11.4006 7.43652C11.1035 5.64404 9.65601 4.16772 7.85376 3.88013C4.94922 3.42017 2.49512 5.82617 2.85962 8.71143C3.0896 10.5327 4.52759 12.0471 6.32959 12.3828ZM4.70581 8.05884C4.70581 6.76001 5.76001 5.70581 7.05884 5.70581C8.35767 5.70581 9.41187 6.76001 9.41187 8.05884C9.41187 9.35767 8.35767 10.4116 7.05884 10.4116C5.76001 10.4116 4.70581 9.35767 4.70581 8.05884Z" clip-rule="evenodd" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+                        </svg>
+                    </span>
+                </button>
+                
             </div>
         </div>
     </header>
