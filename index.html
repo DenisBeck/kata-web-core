@@ -5,17 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/mobile.css">
     <title>Блок 1.4 Продвинутая стилизация</title>
 </head>
 <body class="mobile-menu">
     <header class="header">
         <div class="header__container container">
-            <div class="header__close">
-                <button class="button button--icon">
-                    <img src="img/icons/close.svg" alt="close">
-                </button>
-            </div>
+            <button class="button button--icon">
+                <img src="img/icons/close.svg" alt="close">
+            </button>
             <a href="#" class="header__logo logo"><img class="logo__img" src="img/logo.png" alt="logo"></a>
             <div class="header__search">
                 <button class="button button--icon">
@@ -27,67 +24,64 @@
     <nav class="navigation mobile-menu__navigation">
         <ul class="navigation__list">
             <li class="navigation__item">
-                <div class="title title--active navigation__title">Ремонт техники</div>
+                <a class="title title--active navigation__title">Ремонт техники</a>
             </li>
             <li class="navigation__item">
-                <div class="title navigation__title">Услуги и сервисы</div>
+                <a href="#" class="title navigation__title">Услуги и сервисы</a>
             </li>
             <li class="navigation__item">
-                <div class="title navigation__title">Корпоративным клиентам</div>
+                <a href="#" class="title navigation__title">Корпоративным клиентам</a>
             </li>
             <li class="navigation__item">
-                <div class="title navigation__title">Продавцам техники</div>
+                <a href="#" class="title navigation__title">Продавцам техники</a>
             </li>
             <li class="navigation__item">
-                <div class="title navigation__title">Партнерам</div>
+                <a href="#" class="title navigation__title">Партнерам</a>
             </li>
             <li class="navigation__item">
-                <div class="title navigation__title">Производителям</div>
+                <a href="#" class="title navigation__title">Производителям</a>
             </li>
             <li class="navigation__item">
-                <div class="title navigation__title">Наши сервисные центры</div>
+                <a href="#" class="title navigation__title">Наши сервисные центры</a>
             </li>
             <li class="navigation__item">
-                <div class="title navigation__title">Контакты</div>
+                <a href="#" class="title navigation__title">Контакты</a>
             </li>
         </ul>
     </nav>
     <footer class="footer">
-        <div class="footer__container container">
-            <ul class="footer__contacts contacts">
-                <li class="contacts__item">
-                    <button class="button button--icon contacts__phone">
-                        <img src="img/icons/phone.svg" alt="phone">
-                    </button>
-                </li>
-                <li class="contacts__item">
-                    <button class="button button--icon contacts__chat">
-                        <img src="img/icons/chat.svg" alt="chat">
-                    </button>
-                </li>
-                <li class="contacts__item">
-                    <button class="button button--icon contacts__profile">
-                        <img src="img/icons/profile.svg" alt="profile">
-                    </button>
-                </li>
-            </ul>
-            <a class="footer__email" href="mailto:mail@cps.com">mail@cps.com</a>
-            <a class="footer__phone" href="tel:88008908900">8 800 890 8900</a>
-            <div class="footer__language">
-                <div class="radio">
-                    <input id="lang_ru"class="radio__input" type="radio" value="1" checked name="lang">
-                    <label for="lang_ru" class="radio__label">Ru</label>
-                </div>
-                <div class="radio">
-                    <input id="lang_en"class="radio__input" type="radio" value="2" name="lang">
-                    <label for="lang_en" class="radio__label">En</label>
-                </div>
-                <div class="radio">
-                    <input id="lang_ch"class="radio__input" type="radio" value="3" name="lang">
-                    <label for="lang_ch" class="radio__label">Ch</label>
-                </div>
-            </div>
-        </div>
+        <ul class="footer__contacts contacts">
+            <li class="contacts__item">
+                <button class="button button--icon contacts__phone">
+                    <img src="img/icons/phone.svg" alt="phone">
+                </button>
+            </li>
+            <li class="contacts__item">
+                <button class="button button--icon contacts__chat">
+                    <img src="img/icons/chat.svg" alt="chat">
+                </button>
+            </li>
+            <li class="contacts__item">
+                <button class="button button--icon contacts__profile">
+                    <img src="img/icons/profile.svg" alt="profile">
+                </button>
+            </li>
+        </ul>
+        <address class="address">
+            <a class="address__email" href="mailto:mail@cps.com">mail@cps.com</a>
+            <a class="address__phone" href="tel:88008908900">8 800 890 8900</a>
+        </address>
+        <ul class="language">
+            <li class="language__item language__item--active">
+                <a href="#" class="language__link">Ru</a>
+            </li>
+            <li class="language__item">
+                <a href="#" class="language__link">En</a>
+            </li>
+            <li class="language__item">
+                <a href="#" class="language__link">Ch</a>
+            </li>
+        </ul>
     </footer>
 </body>
 </html>

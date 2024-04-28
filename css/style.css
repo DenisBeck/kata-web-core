@@ -28,7 +28,7 @@ svg {
 }
 
 .container {
-    padding: 0 16px;
+    padding: 0 24px;
     width: 100%;
     margin: 0 auto;
     max-width: 1440px;
@@ -161,7 +161,7 @@ svg {
     width: 4px;
     height: 100%;
     top: 0;
-    left: -16px;
+    left: -20px;
     background: rgb(65, 246, 215);
     border-radius: 0 4px 4px 0;
     opacity: 0;
@@ -249,6 +249,104 @@ svg {
 .services__image {
     width: 100%;
 }
+
+.mobile-menu {
+    width: 320px;
+    height: 100%;
+    min-height: 100vh;
+    box-shadow: 16px 0px 52px 0px rgba(14, 24, 80, 0.2),-2px 0px 4px 0px rgba(69, 79, 126, 0.02);
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 32px;
+}
+.mobile-menu__navigation {
+    flex: 1 1 auto;
+    margin-bottom: 32px;
+    
+}
+
+/* --------- MOBILE NAVIGATION ------------------------------------------------------ */
+
+.navigation__item {
+    margin-bottom: 32px;
+}
+.navigation__item:last-child {
+    margin-bottom: 0;;
+}
+.navigation__title {
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: rgb(27, 28, 33);
+    cursor: pointer;
+}
+.navigation__title.title--active,
+.navigation__title:hover {
+    color: rgb(126, 126, 130);
+}
+
+/* --------- MOBILE FOOTER ------------------------------------------------------ */
+
+.footer {
+    padding: 0 24px;
+}
+.footer__contacts {
+    width: 152px;
+    margin-bottom: 16px;
+    color: rgb(27, 28, 33);
+}
+
+.language {
+    display: flex;
+    gap: 10px;
+}
+.language__link {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    caret-color: transparent;
+    cursor: pointer;
+    transition: color 0.5s;
+}
+.language__item--active>.language__link,
+.language__link:hover {
+    color: rgb(126, 126, 130);
+}
+
+/* --------- ADDRESS ------------------------------------------------------ */
+
+.address {
+    font-style: normal;
+}
+.address__email {
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    margin-bottom: 12px;
+}
+.address__phone {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    margin-bottom: 40px;
+}
+.address__email,
+.address__phone {
+    transition: color 0.3s ease-in;
+}
+.address__email:hover,
+.address__phone:hover {
+    color: #FF3E79;
+}
+
 
 /* --------- MEDIA ------------------------------------------------------ */
 
