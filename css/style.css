@@ -127,12 +127,6 @@ svg {
     margin-right: auto
 }
 
-/* --------- MOBILE MENU ------------------------------------------------------ */
-
-.mobile-menu .header__search {
-    display: block;
-}
-
 /* --------- LOGO ------------------------------------------------------ */
 
 .logo {
@@ -250,6 +244,8 @@ svg {
     width: 100%;
 }
 
+/* --------- MOBILE MENU ------------------------------------------------------ */
+
 .mobile-menu {
     width: 320px;
     height: 100%;
@@ -263,7 +259,9 @@ svg {
 .mobile-menu__navigation {
     flex: 1 1 auto;
     margin-bottom: 32px;
-    
+}
+.mobile-menu .header__search {
+    display: block;
 }
 
 /* --------- MOBILE NAVIGATION ------------------------------------------------------ */
@@ -405,7 +403,7 @@ svg {
     .header__button {
         margin-right: 24px;
     }
-    .header__search {
+    .header__start .header__search {
         display: block;
         margin-right: 30px;
     }
