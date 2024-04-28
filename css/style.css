@@ -45,12 +45,16 @@ svg {
     justify-content: center;
     color: #fff;
     cursor: pointer;
+    transition: opacity 0.3s ease-out;
 }
 .button--icon {
     width: 40px;
     height: 40px;
     flex: 0 0 40px;
     padding: 10px;
+}
+.button:hover {
+    opacity: 0.5;
 }
 
 /* --------- CONTACTS ------------------------------------------------------ */
@@ -123,6 +127,12 @@ svg {
     margin-right: auto
 }
 
+/* --------- MOBILE MENU ------------------------------------------------------ */
+
+.mobile-menu .header__search {
+    display: block;
+}
+
 /* --------- LOGO ------------------------------------------------------ */
 
 .logo {
@@ -139,12 +149,11 @@ svg {
 
 .title {
     font-size: 28px;
-    line-height: 40px;
     font-weight: bold;
     letter-spacing: -0.6px;
     width: fit-content;
-    max-width: 450px;
     position: relative;
+    transition: all 0.5s;
 }
 .title::before {
     content: '';
@@ -155,6 +164,12 @@ svg {
     left: -16px;
     background: rgb(65, 246, 215);
     border-radius: 0 4px 4px 0;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.title--active::before,
+.title:hover::before {
+    opacity: 1;
 }
 
 /* --------- SERVICES ------------------------------------------------------ */
@@ -165,6 +180,8 @@ svg {
 }
 .services__title {
     margin-bottom: 24px;
+    line-height: 40px;
+    max-width: 450px;
 }
 .services__nav {
     overflow-x: auto;
@@ -231,14 +248,6 @@ svg {
 }
 .services__image {
     width: 100%;
-    position: relative;
-}
-.services__image>img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-bottom: 55%;
 }
 
 /* --------- MEDIA ------------------------------------------------------ */
