@@ -1,16 +1,13 @@
-html {
-    box-sizing: border-box;
-}
 *, *:before, *:after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 body {
     font-family: 'TT Lakes';
     color: rgb(27, 28, 33);
 }
-li {
+ul {
     list-style: none;
 }
 a {
@@ -28,26 +25,35 @@ svg {
 }
 
 .container {
-    padding: 0 24px;
     width: 100%;
     margin: 0 auto;
     max-width: 1440px;
 }
 
+.main {
+    background-color: rgb(248, 248, 248);
+    display: flex;
+    height: auto;
+}
+.main__body {
+    padding-inline: 16px;
+    width: 100%;
+}
+
 /* --------- BUTTON ------------------------------------------------------ */
 
 .button {
-    border-radius: 50%;
-    background: #FF3E79 center no-repeat;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
     cursor: pointer;
     transition: opacity 0.3s ease-out;
 }
 .button--icon {
+    border-radius: 50%;
+    background: #FF3E79 center no-repeat;
+    color: #fff;
     width: 40px;
     height: 40px;
     flex: 0 0 40px;
@@ -55,6 +61,25 @@ svg {
 }
 .button:hover {
     opacity: 0.5;
+}
+.button--showmore {
+    background: transparent;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+}
+.button--showmore::before {
+    content: '';
+    margin-right: 8px;
+    width: 24px;
+    height: 24px;
+    background: url('../img/icons/expand.png') center no-repeat;
+    transition: all 0.3s;
+}
+.hide::before {
+    transform: rotate(180deg);
 }
 
 /* --------- CONTACTS ------------------------------------------------------ */
@@ -165,6 +190,13 @@ svg {
 .title:hover::before {
     opacity: 1;
 }
+.title--section {
+    color: rgb(126, 126, 130);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+}
 
 /* --------- SERVICES ------------------------------------------------------ */
 
@@ -212,30 +244,6 @@ svg {
 }
 .services__text--hidden {
     display: none;
-}
-.services__button {
-    border: none;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 16px;
-    cursor: pointer;
-}
-.services__more {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
-    letter-spacing: -0.2px;
-    display: flex;
-    align-items: center;
-}
-.services__more::before {
-    content: '';
-    margin-right: 8px;
-    width: 24px;
-    height: 24px;
-    background: url('../img/icons/expand.png') center no-repeat;
 }
 .services__image-block {
     margin-inline: -16px;
@@ -345,6 +353,79 @@ svg {
     color: #FF3E79;
 }
 
+/* --------- BRANDS REPAIR ------------------------------------------------------ */
+
+.brands-repair {
+    padding: 16px 0;
+}
+.brands-repair__title {
+    margin-bottom: 32px;
+}
+
+.swiper.brands-repair__body {
+    padding-bottom: 38px;
+    margin-inline: -16px;
+}
+.swiper.brands-repair__body::before,
+.swiper.brands-repair__body::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 72px;
+    bottom: 38px;
+    z-index: 10;
+}
+.swiper.brands-repair__body::before {
+    left: 0;
+    background: linear-gradient(90.00deg, rgb(248, 248, 248) 16.836%,rgba(248, 248, 248, 0) 100%);
+}
+.swiper.brands-repair__body::after {
+    right: 0px;
+    background: linear-gradient(270.00deg, rgb(248, 248, 248) 16.836%,rgba(248, 248, 248, 0) 100%);
+}
+.swiper-pagination.brands-repair__pagination {
+    white-space: nowrap;
+    bottom: 0;
+}
+.swiper-pagination.brands-repair__pagination .swiper-pagination-bullet {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    margin-inline: 6px;
+    background-color: #888888;
+    caret-color: transparent;
+}
+.swiper-pagination.brands-repair__pagination .swiper-pagination-bullet-active {
+    background: rgb(181, 182, 188);
+}
+.brands-repair__button {
+    display: none;
+}
+
+/* --------- BRANDS ITEM ------------------------------------------------------ */
+
+.brands-item {
+    border: 1px solid rgb(234, 234, 234);
+    border-radius: 6px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    height: 72px;
+}
+.brands-item__img {
+    height: auto;
+    max-width: 50%;
+    max-height: 38px;
+    object-fit: contain;
+}
+.brands-item__link {
+    background: transparent url('/img/icons/arrow.svg') 50% 50% no-repeat;
+    border: 2px solid #FF3E79;
+    flex: 0 0 40px;
+}
 
 /* --------- MEDIA ------------------------------------------------------ */
 
@@ -363,6 +444,11 @@ svg {
         margin-right: 20px;
         margin-left: auto;
     }
+
+    .main__body {
+        padding-inline: 24px;
+    }
+
     .services__content {
         display: flex;
         justify-content: space-between;
@@ -382,15 +468,40 @@ svg {
     .services__text--hidden {
         display: block;
     }
+
+    .brands-repair__button {
+        display: flex;
+    }
+
+    .brands-repair__body {
+        margin-bottom: 24px;
+    }
+    .brands-repair__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 16px;
+        column-gap: 24px;
+    }
+    .brands-repair__item--hidden,
+    .brands-repair__item--hidden-tablet {
+        display: none;
+    }
+    .swiper-pagination {
+        display: none;
+    }
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 992px) {
+    .main__body {
+        flex: 1 1 auto;
+    }
+    .main__aside {
+        flex: 0 0 320px;
+    }
     .main__services {
-        max-width: 1120px;
-        margin-left: auto;
-        width: 77%;
         margin-top: -87px;
     }
+
     .header__start {
         width: calc(23% - 16px);
     }
@@ -415,5 +526,17 @@ svg {
     }
     .services__list {
         flex-wrap: wrap;
+    }
+
+    
+}
+
+@media (min-width: 1200px) {
+    .brands-repair__list {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 32px;
+    }
+    .brands-repair__item--hidden-tablet {
+        display: flex;
     }
 }

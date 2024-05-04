@@ -3,85 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Блок 1.4 Продвинутая стилизация</title>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" type="text/javascript"></script>
+    <title>Блок 1.5 JavaScript в браузере</title>
 </head>
-<body class="mobile-menu">
-    <header class="header">
-        <div class="header__container container">
-            <button class="button button--icon">
-                <img src="img/icons/close.svg" alt="close">
-            </button>
-            <a href="#" class="header__logo logo"><img class="logo__img" src="img/logo.png" alt="logo"></a>
-            <div class="header__search">
-                <button class="button button--icon">
-                    <img src="img/icons/search.svg" alt="search">
-                </button>
-            </div>
+<body class="page">
+    <main class="main page__main container">
+        <aside class="main__aside"></aside>
+        <div class="main__body">
+            <section class="brands-repair main__brands-repair">
+                <h3 class="brands-repair__title title--section">Ремонт техники различных брендов</h3>
+                <div class="brands-repair__body">
+                    <ul class="brands-repair__list">
+                        <li class="brands-repair__item brands-item">
+                            <img src="img/brands/lenovo.png" alt="lenovo" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li class="brands-repair__item brands-item swiper-slide">
+                            <img src="img/brands/samsung.png" alt="samsung" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li class="brands-repair__item brands-item swiper-slide">
+                            <img src="img/brands/apple.png" alt="apple" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li data-showmore="tablet" class="brands-repair__item brands-repair__item--hidden-tablet brands-item swiper-slide">
+                            <img src="img/brands/viewsonic.png" alt="viewsonic" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li class="brands-repair__item brands-item swiper-slide">
+                            <img src="img/brands/bosch.png" alt="bosch" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li class="brands-repair__item brands-item swiper-slide">
+                            <img src="img/brands/hp.png" alt="hp" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li class="brands-repair__item brands-item swiper-slide">
+                            <img src="img/brands/acer.png" alt="acer" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li data-showmore="tablet" class="brands-repair__item brands-repair__item--hidden-tablet brands-item swiper-slide">
+                            <img src="img/brands/sony.png" alt="sony" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li data-showmore="all" class="brands-repair__item brands-repair__item--hidden brands-item swiper-slide">
+                            <img src="img/brands/lenovo.png" alt="lenovo" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li data-showmore="all" class="brands-repair__item brands-repair__item--hidden brands-item swiper-slide">
+                            <img src="img/brands/samsung.png" alt="samsung" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                        <li data-showmore="all" class="brands-repair__item brands-repair__item--hidden brands-item swiper-slide">
+                            <img src="img/brands/apple.png" alt="apple" class="brands-item__img">
+                            <a href="#" class="brands-item__link button button--icon"></a>
+                        </li>
+                    </ul>
+                    <div class="brands-repair__pagination swiper-pagination"></div>
+                </div>
+                <button class="brands-repair__button button button--showmore">Показать все</button>
+            </section>
         </div>
-    </header>
-    <nav class="navigation mobile-menu__navigation">
-        <ul class="navigation__list">
-            <li class="navigation__item">
-                <a class="title title--active navigation__title">Ремонт техники</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#" class="title navigation__title">Услуги и сервисы</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#" class="title navigation__title">Корпоративным клиентам</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#" class="title navigation__title">Продавцам техники</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#" class="title navigation__title">Партнерам</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#" class="title navigation__title">Производителям</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#" class="title navigation__title">Наши сервисные центры</a>
-            </li>
-            <li class="navigation__item">
-                <a href="#" class="title navigation__title">Контакты</a>
-            </li>
-        </ul>
-    </nav>
-    <footer class="footer">
-        <ul class="footer__contacts contacts">
-            <li class="contacts__item">
-                <button class="button button--icon contacts__phone">
-                    <img src="img/icons/phone.svg" alt="phone">
-                </button>
-            </li>
-            <li class="contacts__item">
-                <button class="button button--icon contacts__chat">
-                    <img src="img/icons/chat.svg" alt="chat">
-                </button>
-            </li>
-            <li class="contacts__item">
-                <button class="button button--icon contacts__profile">
-                    <img src="img/icons/profile.svg" alt="profile">
-                </button>
-            </li>
-        </ul>
-        <address class="address">
-            <a class="address__email" href="mailto:mail@cps.com">mail@cps.com</a>
-            <a class="address__phone" href="tel:88008908900">8 800 890 8900</a>
-        </address>
-        <ul class="language">
-            <li class="language__item language__item--active">
-                <a href="#" class="language__link">Ru</a>
-            </li>
-            <li class="language__item">
-                <a href="#" class="language__link">En</a>
-            </li>
-            <li class="language__item">
-                <a href="#" class="language__link">Ch</a>
-            </li>
-        </ul>
-    </footer>
+    </main>
+
+    <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
