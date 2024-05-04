@@ -422,7 +422,7 @@ svg {
     object-fit: contain;
 }
 .brands-item__link {
-    background: transparent url('/img/icons/arrow.svg') 50% 50% no-repeat;
+    background: transparent url('../img/icons/arrow.svg') 50% 50% no-repeat;
     border: 2px solid #FF3E79;
     flex: 0 0 40px;
 }
