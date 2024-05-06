@@ -39,6 +39,9 @@ svg {
     padding-inline: 16px;
     width: 100%;
 }
+.main__aside {
+    display: none;
+}
 
 /* --------- BUTTON ------------------------------------------------------ */
 
@@ -180,7 +183,7 @@ svg {
     width: 4px;
     height: 100%;
     top: 0;
-    left: -20px;
+    left: -16px;
     background: rgb(65, 246, 215);
     border-radius: 0 4px 4px 0;
     opacity: 0;
@@ -430,6 +433,9 @@ svg {
 /* --------- MEDIA ------------------------------------------------------ */
 
 @media (min-width: 768px) {
+    .title::before {
+        left: -24px;
+    }
     .header__burger::after {
         content: '';
         width: 2px;
@@ -497,7 +503,10 @@ svg {
     }
     .main__aside {
         flex: 0 0 320px;
+        display: flex;
+        flex-direction: column;
     }
+
     .main__services {
         margin-top: -87px;
     }
