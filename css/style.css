@@ -167,14 +167,17 @@ svg {
 /* --------- TITLE ------------------------------------------------------ */
 
 .title {
-    font-size: 28px;
-    font-weight: bold;
-    letter-spacing: -0.6px;
-    width: fit-content;
-    position: relative;
-    transition: all 0.5s;
+    color: #7E7E82;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
 }
-.title::before {
+.title--with-decor {
+    position: relative;
+}
+.title--with-decor::before {
     content: '';
     position: absolute;
     width: 4px;
@@ -190,13 +193,6 @@ svg {
 .title:hover::before {
     opacity: 1;
 }
-.title--section {
-    color: rgb(126, 126, 130);
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    text-transform: uppercase;
-}
 
 /* --------- SERVICES ------------------------------------------------------ */
 
@@ -208,6 +204,16 @@ svg {
     margin-bottom: 24px;
     line-height: 40px;
     max-width: 450px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: -0.6px;
+    width: fit-content;
+    position: relative;
+    transition: all 0.5s;
+    text-transform: none;
+    color: #1B1C21;
+
+
 }
 .services__nav {
     overflow-x: auto;
@@ -287,6 +293,7 @@ svg {
     line-height: 24px;
     color: rgb(27, 28, 33);
     cursor: pointer;
+    text-transform: none;
 }
 .navigation__title.title--active,
 .navigation__title:hover {
@@ -407,6 +414,7 @@ svg {
 
 .brands-item {
     border: 1px solid rgb(234, 234, 234);
+    background-color: #ffffff;
     border-radius: 6px;
     padding: 16px;
     display: flex;
@@ -472,9 +480,13 @@ svg {
     .brands-repair__button {
         display: flex;
     }
-
-    .brands-repair__body {
-        margin-bottom: 24px;
+    .swiper.brands-repair__body {
+        margin: auto auto 24px;
+        padding-bottom: 0;
+    }
+    .swiper.brands-repair__body::before,
+    .swiper.brands-repair__body::after {
+        display: none;
     }
     .brands-repair__list {
         display: grid;
