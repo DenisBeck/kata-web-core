@@ -1,3 +1,6 @@
+// import '../css/fonts.css';
+// import '../css/style.css';
+
 // Переменные для свайпера
 let swiper;
 let brandsSwiper = document.querySelector('.brands-repair__body');
