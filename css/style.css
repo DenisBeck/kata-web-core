@@ -36,7 +36,6 @@ svg {
     height: auto;
 }
 .main__body {
-    padding-inline: 16px;
     width: 100%;
 }
 
@@ -127,6 +126,7 @@ svg {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 16px;
 }
 .header__start {
     display: flex;
@@ -173,6 +173,11 @@ svg {
     font-weight: 400;
     letter-spacing: -0.2px;
     text-transform: uppercase;
+}
+.title--h3 {
+    background-image: linear-gradient(90deg, #F8F8F8 0%, #ffffff 100%);
+    border-top: 1px solid #D9FFF5;
+    padding: 16px;
 }
 .title--with-decor {
     position: relative;
@@ -362,14 +367,12 @@ svg {
 
 /* --------- BRANDS REPAIR ------------------------------------------------------ */
 
-.brands-repair {
-    padding: 16px 0;
-}
 .brands-repair__title {
     margin-bottom: 32px;
 }
 
 .swiper.brands-repair__body {
+    padding-inline: 16px;
     padding-bottom: 38px;
     margin-inline: -16px;
 }
@@ -384,11 +387,11 @@ svg {
     z-index: 10;
 }
 .swiper.brands-repair__body::before {
-    left: 0;
+    left: 16px;
     background: linear-gradient(90.00deg, rgb(248, 248, 248) 16.836%,rgba(248, 248, 248, 0) 100%);
 }
 .swiper.brands-repair__body::after {
-    right: 0px;
+    right: 16px;
     background: linear-gradient(270.00deg, rgb(248, 248, 248) 16.836%,rgba(248, 248, 248, 0) 100%);
 }
 .swiper-pagination.brands-repair__pagination {
@@ -438,6 +441,10 @@ svg {
 /* --------- MEDIA ------------------------------------------------------ */
 
 @media (min-width: 768px) {
+    .title--h3 {
+        padding-inline: 24px;
+    }
+
     .header__burger::after {
         content: '';
         width: 2px;
@@ -452,8 +459,7 @@ svg {
         margin-right: 20px;
         margin-left: auto;
     }
-
-    .main__body {
+    .header__container {
         padding-inline: 24px;
     }
 
@@ -483,6 +489,7 @@ svg {
     .swiper.brands-repair__body {
         margin: auto auto 24px;
         padding-bottom: 0;
+        padding-inline: 24px;
     }
     .swiper.brands-repair__body::before,
     .swiper.brands-repair__body::after {
