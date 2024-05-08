@@ -50,27 +50,13 @@ const initSlider = function () {
     });
 }
 
-const addSwiperClasses = function () {
-    brandsSwiper.classList.add('swiper');
-    brandsSwiperList.classList.add('swiper-wrapper');
-    brandsSwiperItem.classList.add('swiper-slide');
-}
-
-const removeSwiperClasses = function () {
-    brandsSwiper.classList.remove('swiper');
-    brandsSwiperList.classList.remove('swiper-wrapper');
-    brandsSwiperItem.classList.remove('swiper-slide')
-}
-
 window.addEventListener("load", function () {
     const breakpoint = window.matchMedia('(max-width: 768px');
     const checkSlider = function (breakpoint) {
         if (breakpoint.matches) {
-            addSwiperClasses();
             initSlider();
         } else {
             if (swiper) {
-                removeSwiperClasses();
                 swiper.destroy();
                 swiper = null;
             }
@@ -84,12 +70,11 @@ window.addEventListener("load", function () {
 
     showmoreButton.addEventListener('click', function () {
         toggleShowmoreElements();
+        showmoreButton.classList.toggle('hide');
         if(showmoreButton.textContent === 'Показать все') {
             showmoreButton.textContent = 'Скрыть';
-            showmoreButton.classList.add('hide');
         } else {
             showmoreButton.textContent = 'Показать все';
-            showmoreButton.classList.remove('hide');
         }
     })
 });
