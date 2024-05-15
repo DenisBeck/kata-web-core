@@ -1,0 +1,82 @@
+//Подключение шрифта
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        src: url('../fonts/#{$file_name}.eot');
+        src: url('../fonts/#{$file_name}.eot?#iefix') format('embedded-opentype'),
+            url('../fonts/#{$file_name}.woff') format('woff'),
+            url('../fonts/#{$file_name}.ttf') format('truetype');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+
+@mixin mobile-slider {
+    padding-bottom: 38px;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 24px;
+        height: calc(100% - 38px);
+        bottom: 38px;
+        z-index: 10;
+
+        @media(min-width: 768px) {
+            display: none;
+        }
+    }
+
+    &::before {
+        left: 0;
+        background: linear-gradient(90.00deg, rgb(248, 248, 248) 16.836%,rgba(248, 248, 248, 0) 100%);
+    }
+
+    &::after {
+        right: 0;
+        background: linear-gradient(270.00deg, rgb(248, 248, 248) 16.836%,rgba(248, 248, 248, 0) 100%);
+    }
+
+    @media(min-width: 768px) {
+        margin: auto auto 24px;
+        padding-bottom: 0;
+    }
+}
+
+@mixin mobile-slider-pagination {
+    white-space: nowrap;
+    bottom: 0;
+
+    .swiper-pagination-bullet {
+        cursor: pointer;
+        width: 12px;
+        height: 12px;
+        margin-inline: 6px;
+        background-color: #888888;
+        caret-color: transparent;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: rgb(181, 182, 188);
+    }
+
+    @media(min-width: 768px) {
+        display: none;
+    }
+}
+
+@mixin list-layout {
+    @media(min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 16px;
+        column-gap: 24px;
+    }
+    
+    @media(min-width: 1200px) {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 32px;
+    }
+}

@@ -2,52 +2,86 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FileManagerPlugin = require('filemanager-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const isProduction = process.env.NODE_ENV == 'production';
 
-
 const stylesHandler = 'style-loader';
 
-
-
 const config = {
-    entry: './src/js/script.js',
+    entry: './src/index.js',
     output: {
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname, 'dist'),
+    },
+    resolve: {
+        alias: {
+            "@": path.resolve(__dirname, 'src'),
+        },
+        extensions: ['.js', '.scss']
     },
     devServer: {
         open: true,
         host: 'localhost',
+        hot: true
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: path.join(__dirname, 'src', 'index.html')
         }),
-        new MiniCssExtractPlugin()
+        new FileManagerPlugin({
+            events: {
+                onStart: {
+                    delete: ['dist'],
+                },
+            },
+        }),
+        new MiniCssExtractPlugin({
+            filename: '[name].[contenthash].css'
+        }),
+        new CopyWebpackPlugin({
+            patterns: [{
+                from: 'src/img',
+                to: 'img'
+            }]
+        })
     ],
     module: {
         rules: [
             {
                 test: /\.(js|jsx)$/i,
                 loader: 'babel-loader',
+                exclude: /node_modules/,
             },
             {
-                test: /\.s[ac]ss$/i,
-                use: [stylesHandler, 'css-loader', 'postcss-loader', 'sass-loader'],
+                test: /\.(scss|css)$/i,
+                use: [
+                    !isProduction ? stylesHandler : MiniCssExtractPlugin.loader, 
+                    'css-loader', 'postcss-loader', 'sass-loader'],
             },
             {
-                test: /\.css$/i,
-                use: [stylesHandler, MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
+                test: /\.(png|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'img/[name][ext]',
+                },
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
-                type: 'src/',
+                test: /\.(svg)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'img/icons/[name][ext]',
+                },
             },
-            // {
-            //     test: /\.css$/i,
-            //     use: [MiniCssExtractPlugin.loader, "css-loader"],
-            // },
+            {
+                test: /\.(eot|ttf|woff|woff2)$/i,
+                type: 'asset/resource',
+                generator: {
+                    filename: 'fonts/[name][ext]',
+                },
+            }
         ],
     },
 };
