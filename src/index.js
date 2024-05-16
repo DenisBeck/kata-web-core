@@ -1,3 +1,9 @@
+import Swiper from 'swiper';
+import { Pagination } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+
 import './css/fonts';
 import './css/style';
 
@@ -46,6 +52,7 @@ const toggleShowmoreElements = function (className, button) {
 
 const initSlider = function (swiper) {
     swiper.swiperInstance = new Swiper(`.${swiper.className}`, {
+        modules: [ Pagination ],
         slidesPerView: 2,
         spaceBetween: 16,
         loop: true,
