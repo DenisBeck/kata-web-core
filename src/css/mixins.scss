@@ -67,16 +67,23 @@
     }
 }
 
-@mixin list-layout {
+@mixin list-layout($rows_count, $row_height) {
     @media(min-width: 768px) {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat($rows_count, #{$row_height});
+        max-height: calc($rows_count * #{$row_height} + 16px * ($rows_count - 1));
         row-gap: 16px;
         column-gap: 24px;
+        transition: max-height 0.5s ease;
     }
     
     @media(min-width: 1200px) {
         grid-template-columns: repeat(4, 1fr);
         column-gap: 32px;
+    }
+
+    &.shown {
+        max-height: 1000px;
     }
 }
